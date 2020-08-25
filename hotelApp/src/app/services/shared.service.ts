@@ -13,7 +13,7 @@ export class SharedService {
     this.addDemoData();
   }
 
-  isLoggedIn = true;
+  isLoggedIn = false;
 
   foods: Food[] = new Array();
   tables: Table[] = new Array();

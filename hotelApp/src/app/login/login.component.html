@@ -1,0 +1,41 @@
+<div class="centerText">
+    <mat-card style="width: 300px;margin: 20px;padding:20px">
+        <div class="centerText" style="font-size: 20px;">
+            Login
+        </div>
+        <hr>
+
+        <div style="height: 30px;border-style: solid;border-width: 1px;border-color: black;padding: 10px;font-size: 20px;">
+            {{pinText}}
+        </div>
+        <br>
+        
+        <div style="overflow: auto;">
+        
+            <button class="grid3" (click)="appendPinText('*')" mat-stroked-button>1</button>
+            <button class="grid3" (click)="appendPinText('*')" mat-stroked-button>2</button>
+            <button class="grid3" (click)="appendPinText('*')" mat-stroked-button>3</button>
+
+            <br>
+            
+            <button class="grid3" (click)="appendPinText('*')" mat-stroked-button>4</button>
+            <button class="grid3" (click)="appendPinText('*')" mat-stroked-button>5</button>
+            <button class="grid3" (click)="appendPinText('*')" mat-stroked-button>6</button>
+
+            <br>
+            <button class="grid3" (click)="appendPinText('*')" mat-stroked-button>7</button>
+            <button class="grid3" (click)="appendPinText('*')" mat-stroked-button>8</button>
+            <button class="grid3" (click)="appendPinText('*')" mat-stroked-button>9</button>
+
+            <br>
+            <button class="grid1" (click)="appendPinText('*')" mat-stroked-button>0</button>
+
+            <br>
+
+            <button class="grid2" (click)="onLogin()" color="primary" mat-stroked-button>Login</button>
+            <button class="grid2" (click)="onClear()" mat-stroked-button>Clear</button>
+
+        </div>
+        
+    </mat-card>
+</div>

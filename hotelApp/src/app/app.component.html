@@ -1,2 +1,7 @@
-
-<router-outlet></router-outlet>
+<div *ngIf="!sharedService.isLoggedIn">
+  <app-login></app-login>
+</div>
+<div *ngIf="sharedService.isLoggedIn">
+  <!-- <router-outlet></router-outlet> -->
+  <app-home></app-home>
+</div>

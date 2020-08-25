@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Food } from '../Models/Food';
+import { Table } from '../Models/Table';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,8 @@ export class SharedService {
   isLoggedIn = true;
 
   foods:Food[]=new Array();
+  tables:Table[]=new Array();
+
 
   addDemoData(){
     //Starters
@@ -35,6 +38,34 @@ export class SharedService {
     s2.imageUrl="./assets/SoyabeanChilly.jpg"
 
     this.foods.push(s2);
+
+    // Tables
+    var t1 = new Table();
+    t1.id=1;
+    t1.occupancy=6;
+    t1.name="Corner Window Table";
+    t1.status="Available";
+
+    var t2 = new Table();
+    t2.id=2;
+    t2.occupancy=4
+    t2.name="Center Table";
+    t2.status="Available";
+
+    var t3 = new Table();
+    t3.id=3;
+    t3.occupancy=4;
+    t3.name="Maharaja Table";
+    t3.status="Available";
+
+    var t4 = new Table();
+    t4.id=4;
+    t4.occupancy=2;
+    t4.name="Couple Table";
+    t4.status="Available";
+
+    this.tables.push(t1,t2,t3,t4)
+
 
   }
 }

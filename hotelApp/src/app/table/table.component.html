@@ -1,1 +1,38 @@
-<p>table works!</p>
+<div style="overflow: auto;">
+    
+<mat-card *ngFor="let table of sharedService.tables"
+style="float: left;width: 300px;margin: 10px;"
+>
+    <div class="centerText">
+        {{table.name}}
+    </div>
+    <hr>
+    <table>
+        <tr>
+            <th>
+                Capacity :
+            </th>
+            <td>
+                {{table.capacity}}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Occupancy :
+            </th>
+            <td>
+                {{table.occupancy}}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Status :
+            </th>
+            <td>
+                {{table.status}}
+            </td>
+        </tr>
+    </table>
+</mat-card>
+
+</div>

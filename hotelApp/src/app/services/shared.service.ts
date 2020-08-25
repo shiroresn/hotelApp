@@ -79,11 +79,24 @@ export class SharedService {
   }
 
   addFoodToCart(food: Food) {
-    var item = new Item();
-    item.food = food;
-    item.quantity = 1;
+    var foodFound=false;
+    this.selectedOrder.items.forEach(item => {
+      if(item.food.id==food.id)
+      {
+        foodFound=true;
+        item.quantity++;
+      }
+    });
 
-    this.selectedOrder.items.push(item);
+    if(!foodFound)
+    {
+      var item = new Item();
+      item.food = food;
+      item.quantity = 1;
+  
+      this.selectedOrder.items.push(item);
+    }
+  
   }
 
   calculateTotalPayable() {

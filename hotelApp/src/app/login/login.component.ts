@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../services/shared.service';
+import { Order } from '../Models/Order';
 
 @Component({
   selector: 'app-login',
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
 
   onLogin(){
     this.sharedService.isLoggedIn=true;
+    this.sharedService.selectedOrder=new Order();
   }
 
   onClear(){

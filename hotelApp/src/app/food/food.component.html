@@ -1,6 +1,6 @@
 <mat-accordion>
 
-    <mat-expansion-panel>
+    <mat-expansion-panel expanded>
       <mat-expansion-panel-header>
         <mat-panel-title>
           Starter
@@ -21,7 +21,9 @@
                             <span style="font-size: 20px;">{{food.name}}</span>
                         </td>
                         <td rowspan="2">
-                            <button mat-stroked-button color="primary">Add</button>
+                            <button mat-stroked-button color="primary"
+                            (click)="sharedService.addFoodToCart(food)"
+                            >Add</button>
                         </td>
                     </tr>
                     <tr>

@@ -4,7 +4,10 @@
 style="float: left;width: 300px;margin: 10px;"
 >
     <div class="centerText">
-        {{table.name}}
+        {{table.name}} &nbsp;&nbsp;
+        
+        <button  matTooltip="Clean Table"
+        (click)="sharedService.cleanTable(table.id)" mat-button color="primary">Clean</button>
     </div>
     <hr>
     <table>

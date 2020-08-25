@@ -1,1 +1,104 @@
-<p>cart works!</p>
+<div style="overflow: auto;">
+    <div style="float: left;">
+        <span style="font-size: 20px;">
+            Bill : Rs. {{sharedService.selectedOrder.totalPayable}}/- </span>
+    </div>
+    <div style="float: right;">
+        <button (click)="sharedService.onCancel();unvalidateForm()" style="margin-right: 10px;" mat-stroked-button color="accent">Cancel</button>
+        <button (click)="sharedService.onPay();unvalidateForm()" mat-stroked-button color="primary"
+        [disabled]="!f1.valid || sharedService.selectedOrder.totalPayable==0"
+        >Pay</button>
+    </div>
+</div>
+
+<hr>
+
+<form #f1="ngForm">
+    <mat-form-field class="grid2">
+        <mat-label>Select Table</mat-label>
+        <mat-select name="servingTable" [(ngModel)]="sharedService.selectedOrder.servingTable"
+        (ngModelChange)="setSelectedTable()"
+        required>
+            <mat-option>
+                Select Table
+            </mat-option>
+            <div *ngFor="let table of sharedService.tables">
+
+
+                <div *ngIf="table.status=='Available'">
+                    <mat-option [value]="table.id">
+                        {{table.name}}
+                    </mat-option>
+                </div>
+            </div>
+
+        </mat-select>
+
+    </mat-form-field>
+
+
+    <mat-form-field class="grid2">
+        <mat-label>Number of People</mat-label>
+        <mat-select name="numberOfPeople" [(ngModel)]="sharedService.orderNumberOfPeople">
+            <mat-option>
+                Select Number
+            </mat-option>
+            <div *ngFor="let no of numberOfPeople">
+                <div *ngIf="checkNumberOfPeopleValid(no)">
+                    <mat-option [value]="no">
+                        {{no}}
+                    </mat-option>
+                </div>
+            </div>
+
+        </mat-select>
+
+    </mat-form-field>
+
+
+   
+</form>
+
+<mat-card *ngFor="let item of sharedService.selectedOrder.items;let i = index">
+    <table>
+        <tr style="width: 100%;">
+            <td style="width: 20%;">
+                <img style="height: 30px;width: 30px; border-radius: 10px;" [src]="item.food.imageUrl" alt="">
+            </td>
+            <td style="width: 20%;">
+                {{item.food.name}}
+            </td>
+            <td style="width: 30%;">
+                <table>
+                    <tr>
+                        <td>
+                            <button mat-icon-button color="accent" (click)="reduceQuant(item,i)">
+                                <mat-icon>remove</mat-icon>
+                            </button>
+                        </td>
+                        <td>
+                            {{item.quantity}}
+                        </td>
+                        <td>
+                            <button mat-icon-button color="primary" (click)="addQuant(item)">
+                                <mat-icon>add</mat-icon>
+                            </button>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </td>
+            <td style="width: 20%;">
+                Rs. {{item.food.price * item.quantity}}/-
+            </td>
+            <td>
+                <button mat-icon-button color="primary" (click)="removeItem(i)">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </td>
+
+        </tr>
+    </table>
+
+</mat-card>

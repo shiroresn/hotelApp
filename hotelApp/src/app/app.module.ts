@@ -44,12 +44,18 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { FoodComponent } from './food/food.component';
+import { TableComponent } from './table/table.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    FoodComponent,
+    TableComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

@@ -7,5 +7,5 @@ export class SharedService {
 
   constructor() { }
 
-  isLoggedIn = false;
+  isLoggedIn = true;
 }

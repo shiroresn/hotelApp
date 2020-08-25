@@ -1,1 +1,33 @@
-<p>home works!</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Hotel App</span>
+      <span class="example-spacer"></span>
+      <button (click)="onLogout()" mat-icon-button class="example-icon">
+        <mat-icon>power_settings_new</mat-icon>
+      </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<table style="width: 100%;">
+    <tr>
+        <td style="width: 60%;">
+            <mat-card style="margin: 10px; max-height:600px; overflow:auto;">
+
+                <mat-tab-group>
+                    <mat-tab label="Food"><app-food></app-food> </mat-tab>
+                    <mat-tab label="Table"> <app-table></app-table> </mat-tab>
+                  </mat-tab-group>
+
+                
+            </mat-card>
+           
+        </td>
+        <td>
+           
+            <mat-card style="margin: 10px; max-height:600px; overflow:auto;">
+                <app-cart></app-cart>
+            </mat-card>
+            
+        </td>
+    </tr>
+</table>

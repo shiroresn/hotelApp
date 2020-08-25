@@ -44,6 +44,97 @@ export class SharedService {
 
     this.foods.push(s2);
 
+    var s3 = new Food();
+    s3.id = 3;
+    s3.name = "Chicken Chilly";
+    s3.price = 320;
+    s3.type = "NonVeg";
+    s3.subtype = "Starter";
+    s3.imageUrl = "./assets/Chicken Chilly.jpg"
+
+    this.foods.push(s3);
+
+    var s4 = new Food();
+    s4.id = 4;
+    s4.name = "Paneer Lajavab";
+    s4.price = 420;
+    s4.type = "Veg";
+    s4.subtype = "MainCourse";
+    s4.imageUrl = "./assets/Paneer Lajavab.jpg"
+
+    this.foods.push(s4);
+
+    var s5 = new Food();
+    s5.id = 5;
+    s5.name = "Mutter Paneer";
+    s5.price = 250;
+    s5.type = "Veg";
+    s5.subtype = "MainCourse";
+    s5.imageUrl = "./assets/Mutter Paneer.jpg"
+
+    this.foods.push(s5);
+
+    var s6 = new Food();
+    s6.id = 6;
+    s6.name = "Murg Musallam";
+    s6.price = 460;
+    s6.type = "NonVeg";
+    s6.subtype = "MainCourse";
+    s6.imageUrl = "./assets/Murg Musallam.jpg"
+
+    this.foods.push(s6);
+
+    var s7 = new Food();
+    s7.id = 7;
+    s7.name = "Bajra Roti";
+    s7.price = 40;
+    s7.type = "NA";
+    s7.subtype = "MainCourse";
+    s7.imageUrl = "./assets/Bajra Roti.jpg"
+
+    this.foods.push(s7);
+
+    var s8 = new Food();
+    s8.id = 8;
+    s8.name = "Roti";
+    s8.price = 30;
+    s8.type = "NA";
+    s8.subtype = "MainCourse";
+    s8.imageUrl = "./assets/Roti.jpg"
+
+    this.foods.push(s8);
+
+    var s9 = new Food();
+    s9.id = 9;
+    s9.name = "Tandoor Roti";
+    s9.price = 45;
+    s9.type = "NA";
+    s9.subtype = "MainCourse";
+    s9.imageUrl = "./assets/Tandoor Roti.jpg"
+
+    this.foods.push(s9);
+
+    var s10 = new Food();
+    s10.id = 10;
+    s10.name = "Vanilla Ice Cream";
+    s10.price = 180;
+    s10.type = "NA";
+    s10.subtype = "Dessert";
+    s10.imageUrl = "./assets/Vanilla Ice Cream.jpg"
+
+    this.foods.push(s10);
+
+    var s11 = new Food();
+    s11.id = 11;
+    s11.name = "Chocolate Ice Cream";
+    s11.price = 220;
+    s11.type = "NA";
+    s11.subtype = "Dessert";
+    s11.imageUrl = "./assets/Chocolate Ice Cream.jpg"
+
+    this.foods.push(s11);
+
+
     // Tables
     var t1 = new Table();
     t1.id = 1;

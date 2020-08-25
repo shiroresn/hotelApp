@@ -119,6 +119,7 @@ export class SharedService {
   }
 
   onPay() {
+    alert("Payment Successful for Rs."+this.selectedOrder.totalPayable+"/-")
     this.selectedOrder = new Order();
     this.selectedTable.occupancy = this.orderNumberOfPeople;
     this.selectedTable.status="Busy";
